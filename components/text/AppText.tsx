@@ -7,5 +7,6 @@ export default function AppText({ style, children }: TextProps) {
 const styles = StyleSheet.create({
   text: {
     fontFamily: "Roboto-Bold",
+    fontWeight: "700",
   },
 });

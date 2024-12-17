@@ -31,9 +31,11 @@ export default function AppButton({ title, onPress }: AppButtonProps) {
 
   if (Platform.OS === "android") {
     return (
-      <TouchableNativeFeedback onPress={onPress}>
-        {renderButton()}
-      </TouchableNativeFeedback>
+      <View style={styles.containerAndroid}>
+        <TouchableNativeFeedback onPress={onPress}>
+          {renderButton()}
+        </TouchableNativeFeedback>
+      </View>
     );
   }
 
@@ -52,6 +54,10 @@ const styles = StyleSheet.create({
     borderRadius: 22,
     overflow: "hidden",
   },
+  containerAndroid: {
+    borderRadius: 22,
+    overflow: "hidden",
+  },
   suffix: {
     width: 45,
     height: 45,
@@ -65,6 +71,7 @@ const styles = StyleSheet.create({
     shadowColor: "#0000001A",
     shadowOpacity: 1,
     shadowRadius: 10,
+    elevation: 2,
     justifyContent: "center",
     alignItems: "center",
   },

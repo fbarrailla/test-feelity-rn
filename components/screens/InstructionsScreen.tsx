@@ -1,14 +1,15 @@
 import { router } from "expo-router";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, StatusBar } from "react-native";
 
 import Screen from "@/components/Screen";
 import AppText from "@/components/text/AppText";
 import AppButton from "@/components/buttons/AppButton";
 import TextItem from "../text/TextItem";
 
-export default function HomeScreen() {
+export default function InstructionsScreen() {
   return (
     <Screen>
+      <StatusBar backgroundColor="white" barStyle="dark-content" />
       <View style={styles.container}>
         <AppText style={styles.title}>Brief</AppText>
         <AppText style={styles.subTitle}>
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingTop: 37,
-    paddingLeft: 20,
+    paddingHorizontal: 20,
   },
   subTitle: {
     fontSize: 24,

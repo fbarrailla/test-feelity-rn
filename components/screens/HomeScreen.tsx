@@ -21,7 +21,7 @@ const services = [
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container} edges={["right", "left", "top"]}>
-      <StatusBar barStyle={"light-content"} />
+      <StatusBar backgroundColor="#222222" barStyle={"light-content"} />
       <Header />
       <View style={styles.subHeader}>
         <AppText style={[styles.title, { color: "white", marginTop: 28 }]}>
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   scrollView: {
     marginTop: -60,
     flexGrow: 0,
-    paddingBottom: 60,
+    paddingBottom: Platform.OS === "android" ? 35 : 50,
   },
   subHeader: {
     height: 158,
