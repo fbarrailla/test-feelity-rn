@@ -19,17 +19,21 @@ export default function InstructionsScreen() {
           Condition requise
         </AppText>
         <TextItem style={styles.condition}>Développement smartphone</TextItem>
-        <TextItem style={styles.condition}>
+        <TextItem style={styles.condition} fadeInDelay={1}>
           Cards avec mouvement horizontal
         </TextItem>
-        <TextItem style={styles.condition}>Bouton</TextItem>
-        <TextItem prefix="chevron">Livraison git ou repository public</TextItem>
+        <TextItem style={styles.condition} fadeInDelay={2}>
+          Bouton
+        </TextItem>
+        <TextItem prefix="chevron" fadeInDelay={3}>
+          Livraison git ou repository public
+        </TextItem>
         <AppText
           style={[styles.titleLvl2, { marginTop: 25, marginBottom: 23 }]}
         >
           Option
         </AppText>
-        <TextItem>
+        <TextItem fadeInDelay={4}>
           Proposition d’une animation au choix{`\n`}(arrivée, texte, loading
           etc.)
         </TextItem>
