@@ -33,4 +33,4 @@
      npm run android
      ```
 
-   > For real devices, it requires Expo Go
+> For real devices, it requires Expo Go to be installed.
