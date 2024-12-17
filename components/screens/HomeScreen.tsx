@@ -9,9 +9,9 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import Header from "@/components/Header";
+import ImageCard from "@/components/ImageCard";
+import AppButton from "@/components/buttons/AppButton";
 import AppText from "@/components/text/AppText";
-import ImageCard from "../ImageCard";
-import AppButton from "../buttons/AppButton";
 
 const services = [
   { id: "1", image: require("@/assets/images/service-1.png") },

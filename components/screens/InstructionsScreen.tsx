@@ -1,14 +1,14 @@
+import Constants from "expo-constants";
 import { router } from "expo-router";
-import { View, StyleSheet, StatusBar } from "react-native";
+import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
 
-import Screen from "@/components/Screen";
-import AppText from "@/components/text/AppText";
 import AppButton from "@/components/buttons/AppButton";
-import TextItem from "../text/TextItem";
+import AppText from "@/components/text/AppText";
+import TextItem from "@/components/text/TextItem";
 
 export default function InstructionsScreen() {
   return (
-    <Screen>
+    <SafeAreaView style={styles.screen}>
       <StatusBar backgroundColor="white" barStyle="dark-content" />
       <View style={styles.container}>
         <AppText style={styles.title}>Brief</AppText>
@@ -44,11 +44,18 @@ export default function InstructionsScreen() {
           onPress={() => router.push("/home")}
         />
       </View>
-    </Screen>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: "white",
+  },
   buttonContainer: {
     position: "absolute",
     bottom: 34,
